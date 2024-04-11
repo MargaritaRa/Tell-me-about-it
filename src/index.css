@@ -15,14 +15,12 @@ body {
 }
 
 .book {
-  border: 1px solid black;
   position: relative;
   width: 350px;
   height: 500px;
 }
 
 .paper{
-  border: 1px solid red;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -38,6 +36,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
 }
 
 .front {
@@ -55,6 +55,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*  paper flip effect */
+
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg)
 }
 
 /* control button */
@@ -77,4 +84,17 @@ button:hover FontAwesomeIcon {
 FontAwesomeIcon {
   font-size: 50px;
   color: grey;
+}
+
+/* paper stack order  */
+#p1{
+z-index: 3;
+}
+
+#p2{
+  z-index: 2;
+}
+
+#p3{
+  z-index: 1;
 }
