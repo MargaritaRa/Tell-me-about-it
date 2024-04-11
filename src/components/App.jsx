@@ -1,8 +1,6 @@
 import  { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
-import NextBtn from './NextBtn'
-import PreviousBtn from './PreviousBtn'
-import Pages from './Pages'
+import Book from "./Book"
 
 
 function App() {
@@ -12,9 +10,7 @@ function App() {
 
       {/* <Navbar /> */}
       
-      <PreviousBtn />
-      <Pages />
-      <NextBtn />
+      <Book />
 
       {/* <Outlet /> */}
 

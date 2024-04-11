@@ -1,17 +1,17 @@
 
 {
-    "portfolios": [
+    "Snow-White": [
         {
             "id": 1,
-            "name": "Phase 2 Project"
+            "Page1": "Caminando por la caje. Una baca me encontre"
         },
         {
             "id": 2,
-            "name": "Phase 1 Project"
+            "Page2": "Porque no tienas nombre. Magy le pondre"
         },
         {
             "id": 3,
-            "name": "Mona Lisa"
+            "Page3": "Aye Magy, que fea eres tu. Con esa narisota y cocote de avistru"
         }
     ]
 }

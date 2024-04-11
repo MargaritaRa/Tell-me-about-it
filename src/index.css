@@ -88,13 +88,14 @@ button:focus {
   outline: none;
 }
 
-button:hover FontAwesomeIcon {
+button:hover #material-symbols-outlined {
   color: #636363;
 }
 
-FontAwesomeIcon {
+#material-symbols-outlined {
   font-size: 50px;
   color: grey;
+  /* background-color: transparent; */
 }
 
 /* paper stack order  */
