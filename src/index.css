@@ -14,10 +14,13 @@ body {
   background-color: rgb(213, 183, 242);
 }
 
+/* Book */
+
 .book {
   position: relative;
   width: 350px;
   height: 500px;
+  transition: transform 0.5s;
 }
 
 .paper{
@@ -26,6 +29,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  perspective: 1500px;
 }
 
 .front,
@@ -37,11 +41,13 @@ body {
   top: 0;
   left: 0;
   transform-origin: left;
-  transition: transform 0.5s;
+  transition: transform 0.4s;
 }
 
 .front {
   z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid rgb(213, 183, 242);
 }
 
 .back {
@@ -55,6 +61,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.back-content {
+  transform: rotateY(-180deg);
 }
 
 /*  paper flip effect */
@@ -71,6 +81,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   margin: 10px;
+  transition: transform 0.5s;
 }
 
 button:focus {
