@@ -1,15 +1,24 @@
-import React, { Children } from 'react'
+// REACT
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/App'
+
+// COMPONENTS
+import App from './components/App.jsx'
 import Home from './components/Home'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import About from './components/About'
 import Contact from './components/Contact'
 import Portfolio from './components/Portfolio'
+import PortfolioItem from './components/PortfolioItem'
 import Bio from './components/Bio'
-import PortfolioItem from "./components/PortfolioItem"
 
+// CSS
+import './index.css'
+
+
+// REACT-ROUTER-DOM
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+// ROUTES
 const routes = [
   {
     path: "/",
@@ -45,12 +54,14 @@ const routes = [
   }
 ]
 
+// ROUTER
 const router = createBrowserRouter(routes)
 
+// RENDER
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <RouterProvider router={router} />
-    
-  </React.StrictMode>
+
+  </React.StrictMode>,
 )

@@ -1,7 +1,7 @@
 function Bio(){
     return(
         <div>
-            <h3>I'm a bio</h3>
+            {/* <h3>I'm a bi</h3> */}
         </div>
     )
 }

@@ -1,20 +1,24 @@
-import {Outlet} from "react-router-dom"
-import Navbar from "./Navbar"
+import  { Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
+import NextBtn from './NextBtn'
+import PreviousBtn from './PreviousBtn'
+import Pages from './Pages'
 
 
 function App() {
 
   return (
-   
     <div>
+
       <Navbar />
-
-      <h1>Tell Me About It</h1>
-
-      <Outlet />
       
-    </div>
+      <PreviousBtn />
+      <Pages />
+      <NextBtn />
 
+      {/* <Outlet /> */}
+
+    </div>
   )
 }
 
@@ -22,7 +26,21 @@ export default App
 
 // routing --> multiple pages
 
-// serverv --> json-server
+// server --> json-server
 
-// GET/movies --> data for ALL movies
-// GET/movie1 
+// RESTUL ROUTES
+
+// GET /movies --> data for ALL movies
+
+// GET /movies/1 --> data for the first movie (a.k.a. movie with id of 1)
+
+// POST /movies --> create data for a movie
+
+// PATCH /movies/1 --> update data for movie with id 1
+
+// DELETE /movies/1 --> delete data for movie with id 1
+
+
+// FRONTEND
+
+// GET /home --> everything
