@@ -4,7 +4,7 @@ import (faCircleArrowRight)
 
 function NextBtn(){
     return( 
-        <button id="next-btn">
+        <button id="next-btn" class="book">
             <FontAwesomeIcon icon={faCircleArrowRight} />
         </button>
     )
