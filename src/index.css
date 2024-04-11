@@ -56,3 +56,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* control button */
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover FontAwesomeIcon {
+  color: #636363;
+}
+
+FontAwesomeIcon {
+  font-size: 50px;
+  color: grey;
+}
