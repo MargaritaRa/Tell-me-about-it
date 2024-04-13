@@ -1,4 +1,4 @@
-function Bio(){
+function BookList(){
     return(
         <div>
             {/* <h3>I'm a bi</h3> */}
@@ -6,4 +6,4 @@ function Bio(){
     )
 }
 
-export default Bio
+export default BookList

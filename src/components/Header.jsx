@@ -8,19 +8,21 @@ function Header() {
         <nav>
             <div className="container nav-contianer">
                 <Link className="nav-logo" to={'/'}>
-                    <h3>Margarita <span>In Tech</span></h3>
+                    <h3>Margarita <span>In </span>Tech</h3>
                 </Link>
 
                 <ul className="nav-menu">
+                    <li><Link to={"/home"}>Home</Link></li>
                     <li><Link to={"/create"}>Create Post</Link></li>
                     <li><Link to={"/bookList"}>Latest Books</Link></li>
-                    <li><Link to={"/authors"}>Authors</Link></li>
                 </ul>
 
-                <button className="nav-toggle-button btn .btn-category">
+                <button className="nav-toggle-button">
                 <FaBars />
                 <IoClose />
                 </button>
+
+                <Outlet />
             </div>
         </nav>
     )

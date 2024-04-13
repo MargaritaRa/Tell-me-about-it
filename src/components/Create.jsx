@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 
-function About(){
+function Create(){
     return(
         <div>
             <h1>Jelou</h1>
@@ -9,4 +9,4 @@ function About(){
     )
 }
 
-export default About
+export default Create
