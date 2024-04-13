@@ -6,10 +6,11 @@ import ReactDOM from 'react-dom/client'
 import App from './components/App.jsx'
 import Home from './components/Home'
 import Create from './components/Create.jsx'
-import Contact from './components/Contact'
-import Post from './components/Post'
-import PostItem from './components/PostItem'
+import CategoryPosts  from './components/CategoryPosts.jsx'
+import Posts from './components/Posts.jsx'
+import PostsItem from './components/PostsItem.jsx'
 import BookList from './components/BookList.jsx'
+import ErrorPage from './components/ErrorPage.jsx'
 
 // CSS
 import './index.css'
@@ -23,32 +24,39 @@ const routes = [
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
+        errorElement: <ErrorPage />
       },
       {
         path: "create",
         element: <Create />,
+        errorElement: <ErrorPage />,
         children: [
           {
-            path: 'post',
-            element: <Post />
+            path: 'posts',
+            element: <Posts />,
+            errorElement: <ErrorPage />
           },
           {
-            path: 'post/:id',
-            element: <PostItem />
+            path: 'posts/:id',
+            element: <PostsItem />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: 'post/categories/:category',
+            element: <CategoryPosts />,
+            errorElement: <ErrorPage />
           },
           {
             path: 'bookList',
-            element: <BookList />
+            element: <BookList />,
+            errorElement: <ErrorPage />
           },
         ]
-      },
-      {
-        path: "contact",
-        element: <Contact />
       },
     ]
   }

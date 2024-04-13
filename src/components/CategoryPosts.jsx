@@ -1,4 +1,4 @@
-function Contact(){
+function CategoryPosts(){
     return( 
         <div>
             {/* <h1>jeje</h1> */}
@@ -6,4 +6,4 @@ function Contact(){
     )
 }
 
-export default Contact
+export default CategoryPosts

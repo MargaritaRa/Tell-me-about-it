@@ -1,7 +1,7 @@
 function Home(){
     return(
         <div>
-            <h1>Tell Me About It</h1>
+            {/* <h1>Tell Me About It</h1> */}
         </div>
     )
 }
