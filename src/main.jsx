@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom/client'
 // COMPONENTS
 import App from './components/App.jsx'
 import Home from './components/Home'
-import About from './components/About'
+import Create from './components/Create.jsx'
 import Contact from './components/Contact'
 import Post from './components/Post'
 import PostItem from './components/PostItem'
-import Bio from './components/Bio'
+import BookList from './components/BookList.jsx'
 
 // CSS
 import './index.css'
@@ -29,8 +29,8 @@ const routes = [
         element: <Home />
       },
       {
-        path: "about",
-        element: <About />,
+        path: "create",
+        element: <Create />,
         children: [
           {
             path: 'post',
@@ -41,8 +41,8 @@ const routes = [
             element: <PostItem />
           },
           {
-            path: 'bio',
-            element: <Bio />
+            path: 'bookList',
+            element: <BookList />
           },
         ]
       },

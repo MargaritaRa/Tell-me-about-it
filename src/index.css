@@ -150,6 +150,18 @@ nav{
 .nav-logo h3 span{
     color: var(--color-light);
 }
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav-menu li a{
+    color: var(--color-white);
+    transition: var(--transition);
+}
+.nav-menu li a:hover{
+    color: var(--color-light);
+}
 .nav-toggle-button{
     background: transparent;
     color: var(--color-white);

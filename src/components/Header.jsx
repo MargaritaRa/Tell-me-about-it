@@ -13,7 +13,7 @@ function Header() {
 
                 <ul className="nav-menu">
                     <li><Link to={"/home"}>Home</Link></li>
-                    <li><Link to={"/create"}>Create Post</Link></li>
+                    <li><Link to={"/create"}>Create New Post</Link></li>
                     <li><Link to={"/bookList"}>Latest Books</Link></li>
                 </ul>
 
@@ -21,8 +21,6 @@ function Header() {
                 <FaBars />
                 <IoClose />
                 </button>
-
-                <Outlet />
             </div>
         </nav>
     )
