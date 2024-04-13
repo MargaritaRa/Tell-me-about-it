@@ -1,4 +1,4 @@
-function Portfolio(){
+function Post(){
     return(
         <div>
             <h1>Children</h1>
@@ -6,4 +6,4 @@ function Portfolio(){
     )
 }
 
-export default Portfolio
+export default Post

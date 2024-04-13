@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-function PortfolioItem() {
+function PostItem() {
 
     const params = useParams()
 
@@ -19,4 +19,4 @@ function PortfolioItem() {
 
 }
 
-export default PortfolioItem
+export default PostItem

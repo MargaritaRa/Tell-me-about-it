@@ -7,8 +7,8 @@ import App from './components/App.jsx'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
-import Portfolio from './components/Portfolio'
-import PortfolioItem from './components/PortfolioItem'
+import Post from './components/Post'
+import PostItem from './components/PostItem'
 import Bio from './components/Bio'
 
 // CSS
@@ -33,12 +33,12 @@ const routes = [
         element: <About />,
         children: [
           {
-            path: 'portfolio',
-            element: <Portfolio />
+            path: 'post',
+            element: <Post />
           },
           {
-            path: 'portfolio/:id',
-            element: <PortfolioItem />
+            path: 'post/:id',
+            element: <PostItem />
           },
           {
             path: 'bio',

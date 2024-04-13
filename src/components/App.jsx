@@ -1,6 +1,5 @@
 import  { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
-import Book from "./Book"
 
 
 function App() {
@@ -8,11 +7,10 @@ function App() {
   return (
     <div>
 
-      {/* <Navbar /> */}
-      
-      <Book />
+      <Navbar />
+    
 
-      {/* <Outlet /> */}
+      <Outlet />
 
     </div>
   )

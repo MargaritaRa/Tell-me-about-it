@@ -1,112 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap')
+
+
 *{
-  margin:auto;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:root{
+    --color-primary: #6f6af8;
+    --color-danger: #da0f3f;
+    --color-white: #ffff;
+    --color-light: #ccc;
+    --color-bg: hwb(240 95% 0%);
+    --color-gray-100: hs1(220, 20%, 10%, 5%);
+    --color-gray-200: hs1(220, 20%, 10%, 10%);
+    --color-gray-300: hs1(220, 20%, 10%, 25%);
+    --color-gray-500: hs1(220, 20%, 10%, 50%);
+    --color-gray-700: #252542;
+    --color-gray-900: #0c0c22;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(213, 183, 242);
+    --transition: .3s ease all;
+
+    --border-radius-1: .2rem;
+    --border-radius-2: .4rem;
+    --border-radius-3: .8rem;
+    --border-radius-4: 1.6rem;
 }
 
-/* Book */
-
-.book {
-  position: relative;
-  width: 350px;
-  height: 500px;
-  transition: transform 0.5s;
+html{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-.paper{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  perspective: 1500px;
+body{
+    background: var(--color-bg);
+    font-size: 16px;
+    color: var(--color-gray-700);
 }
 
-.front,
-.back {
-  background-color: aliceblue;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform-origin: left;
-  transition: transform 0.4s;
+a{
+    text-decoration: none;
+    color: var(--color-gray-700);
 }
 
-.front {
-  z-index: 1;
-  backface-visibility: hidden;
-  border-left: 3px solid rgb(213, 183, 242);
+ul li{
+    list-style: none;
 }
 
-.back {
-  z-index: 0;
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-gray-900);
+    line-height: 1.1;
 }
 
-.front-content,
-.back-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1 {
+    font-size: 2.2rem;
+}
+h2 {
+    font-size: 1.9rem;
+}
+h3 {
+    font-size: 1.3rem;
+    line-height: 1.25;
+}
+h4 {
+    font-size: 1.1rem;
+}
+h5{
+    line-height: 1.4;
 }
 
-.back-content {
-  transform: rotateY(-180deg);
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
 }
 
-/*  paper flip effect */
-
-.flipped .front,
-.flipped .back {
-  transform: rotateY(-180deg)
+section{
+    margin-top: 8rem;
 }
-
-/* control button */
-
-.button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin: 10px;
-  transition: transform 0.5s;
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1800px;
 }
-
-button:focus {
-  outline: none;
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: .6rem 1.2rem;
+    border-radius: var(--border-radius-2);
+    background: var(--color-white);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
 }
-
-button:hover #material-symbols-outlined {
-  color: #636363;
-}
-
-#material-symbols-outlined {
-  font-size: 50px;
-  color: grey;
-  /* background-color: transparent; */
-}
-
-/* paper stack order  */
-#p1{
-z-index: 3;
-}
-
-#p2{
-  z-index: 2;
-}
-
-#p3{
-  z-index: 1;
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-white);
 }
