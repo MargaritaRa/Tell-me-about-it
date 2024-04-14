@@ -1,8 +1,10 @@
+import Posts from "./Posts"
+
 function Home(){
     return(
-        <div>
-            {/* <h1>Tell Me About It</h1> */}
-        </div>
+        <>
+        <Posts />
+        </>
     )
 }
 

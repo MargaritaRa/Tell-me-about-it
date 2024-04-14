@@ -1,17 +1,40 @@
 
 {
-    "Snow-White": [
+    "Posts": [
         {
             "id": 1,
-            "Page1": "Caminando por la caje. Una baca me encontre"
+            "Image": "./Image/FourthWing.png",
+            "category": "Entertainment",
+            "Title": "My Favorite Book",
+            "decription":" Picture this. Dragons, self-discovery, strength, and a smart women. Do I even need to say more?... Nope!"
         },
         {
             "id": 2,
-            "Page2": "Porque no tienas nombre. Magy le pondre"
+            "Image": "./Image/SevenHusbands.png",
+            "category": "Art",
+            "Title": "The Art of Playing the System",
+            "decription":"I understand this book is not based on actual events. However, it holds so much truth, and it highlights what women sometimes have to do to succeed. Fortunately, times have become more progressive."
         },
         {
             "id": 3,
-            "Page3": "Aye Magy, que fea eres tu. Con esa narisota y cocote de avistru"
+            "Image": "./Image/MusicNotes.png",
+            "category": "Music",
+            "Title": "Read Music",
+            "decription":"Let's learn how to read musical notes"
+        },
+        {
+            "id": 4,
+            "Image": "./Image/Negotiate.png",
+            "category": "Education",
+            "Title": "Win the fight",
+            "decription":" Wonder how some people can always negotiate for the lowest amount? Ever wonder how they stay calm and know exactly what to say? Here’s a book that will help you win any negotiation!"
+        },
+        {
+            "id": 5,
+            "Image": "./Image/Vogue.png",
+            "category": "Fashion",
+            "Title": "Vogue",
+            "decription":"Vogue. Need I say more!?!"
         }
     ]
 }
