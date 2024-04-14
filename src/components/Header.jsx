@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 // import react icon
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import Posts from "./Posts";
 
 function Header() {
     return(

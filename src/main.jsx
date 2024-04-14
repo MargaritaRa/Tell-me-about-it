@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client'
 // COMPONENTS
 import App from './components/App.jsx'
 import Home from './components/Home'
-import Create from './components/Create.jsx'
 import CategoryPosts  from './components/CategoryPosts.jsx'
 import Posts from './components/Posts.jsx'
 import PostsItem from './components/PostsItem.jsx'
@@ -32,15 +31,10 @@ const routes = [
         errorElement: <ErrorPage />
       },
       {
-        path: "create",
-        element: <Create />,
+        path: 'posts',
+        element: <Posts />,
         errorElement: <ErrorPage />,
         children: [
-          {
-            path: 'posts',
-            element: <Posts />,
-            errorElement: <ErrorPage />
-          },
           {
             path: 'posts/:id',
             element: <PostsItem />,

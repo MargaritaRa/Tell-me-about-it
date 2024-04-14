@@ -8,13 +8,17 @@ function PostsItem() {
     const [item, setItem] = useState( {} )
 
     useEffect(() => {
-        fetch(`http://localhost:3000/portfolios/${params.id}`)
+        fetch(`http://localhost:3000/Posts/${params.id}`)
         .then(res => res.json())
         .then(data => setItem(data))
     }, [])
 
     return (
-        <h1>{item.name}</h1>
+        <article className='post'>
+            <div className='post-image'>
+                <img src={item.image} alt='' />
+            </div>
+        </article>
     )
 
 }
