@@ -11,9 +11,8 @@ function Posts(){
         .then(data => setPosts(data))
     },[])
 
-    const postsList = posts.map(post => {
-        return <PostsItem key={post.id} post={post}/>
-    });
+    const postsList =
+        posts.map(({Image, Title, category, decription}, index)=> <PostsItem key={index} Image={Image} category={category} />)
 
     return(
         <section className="posts">
@@ -23,11 +22,3 @@ function Posts(){
 }
 
 export default Posts
-
-/* 
-{
-    posts.map(({Image, Title, category, decription}, index)=> <PostItem key={index} Image={Image} category={category} />)
-}
-
-
-*/
