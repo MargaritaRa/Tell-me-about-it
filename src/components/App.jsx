@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
-import Posts from './Posts'
+import Home from './Home'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div>
 
       <Header />
-      <Posts />
+      <Home />
       <Footer />
 
     </div>

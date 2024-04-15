@@ -167,7 +167,7 @@ nav{
     color: var(--color-white);
     display: none;
 }
-/* End Nav Bar */
+
 
 /* Start Error Page */
 .error-center{
@@ -180,9 +180,29 @@ nav{
     align-items: center;
 }
 
-/* End Error Page */
 
-/* End Nav Bar */
+
+/* Start Home Page */
+/* Post component */
+
+.posts-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+.post{
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: var(--border-radius-4);
+    padding-bottom: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: 0 a.5rem 2rem rgba(0,0,0,0.1);
+}
+.post:hover{
+    box-shadow: none;
+}
+
 
 /* Start footer Bar */
 

@@ -5,7 +5,7 @@ function PostsItem() {
 
     const {id} = useParams()
 
-    const [item, setItem] = useState([])
+    const [item, setItem] = useState({})
 
     useEffect(() => {
         fetch(`http://localhost:3000/Posts/${id}`)

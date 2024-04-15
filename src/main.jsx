@@ -10,6 +10,7 @@ import Posts from './components/Posts.jsx'
 import PostsItem from './components/PostsItem.jsx'
 import BookList from './components/BookList.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
+import Create from "./components/Create.jsx"
 
 // CSS
 import './index.css'
@@ -31,7 +32,12 @@ const routes = [
         errorElement: <ErrorPage />
       },
       {
-        path: 'posts',
+        path: "create",
+        element: <Create />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "post",
         element: <Posts />,
         errorElement: <ErrorPage />,
         children: [
