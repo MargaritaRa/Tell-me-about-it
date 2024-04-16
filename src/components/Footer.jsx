@@ -4,7 +4,7 @@ function Footer(){
     return(
         <footer>
             <div className="container footer-container">
-                <ul className="footer-categories">
+                {/* <ul className="footer-categories">
                     <li><Link to={`/post/categories/Education`}>Education</Link></li>
                     <li><Link to={`/post/categories/Entertainment`}>Entertainment</Link></li>
                     <li><Link to={`/post/categories/Art`}>Art</Link></li>
@@ -12,7 +12,7 @@ function Footer(){
                     <li><Link to={`/post/categories/Fashion`}>Fashion</Link></li>
                     <li><Link to={`/post/categories/SelfHelp`}>SelfHelp</Link></li>
                     <li><Link to={`/post/categories/Music`}>Music</Link></li>
-                </ul>
+                </ul> */}
             </div>
         </footer>
     )

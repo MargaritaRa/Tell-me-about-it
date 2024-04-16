@@ -31,6 +31,25 @@ function PostForm({posts, setPosts}) {
 
     function handleSubmit(event) {
         event.preventDefault()
+
+        fetch('http://localhost:3000/Posts', {
+            method: 'POST',
+            headers: {
+                'content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify( {
+                title,
+                image,
+                category,
+                decription,
+                // likes:0
+            })
+        })
+        .then (response => response.json())
+        .then (newPostObj => {
+            setPosts([...posts, newPostObj])
+        })
     }
 
     return(
@@ -50,12 +69,17 @@ function PostForm({posts, setPosts}) {
             onChange={event => setCategory(event.target.value)}
             value={category} />
 
+            {/* <textarea type='text'
+            name='decription'
+            placeholder='Decription'
+            onChange={event => setDescription(event.target.value)}
+            value={category}> Type your description here </textarea> */}
 
             <ReactQuill 
             modules={modules} 
             formats={formats} 
             value={decription}
-            onChange={event => setDescription(event.target.value)}
+            onChange={setDescription}
             />
 
             <input type="file" 
