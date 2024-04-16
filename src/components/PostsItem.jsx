@@ -13,7 +13,7 @@ function PostsItem({ image, category, title, description }) {
         </Link>
         <p>{description}</p>
         <div className="post-footer">
-          <Link to={`/post/categories/${category}`}>{category}</Link>
+          <Link to={`/post/categories/${category}`} className='btn btn-category'>{category}</Link>
         </div>
       </div>
     </article>

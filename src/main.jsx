@@ -32,7 +32,7 @@ const routes = [
         errorElement: <ErrorPage />
       },
       {
-        path: "create",
+        path: "/posts/create",
         element: <Create />,
         errorElement: <ErrorPage />
       },

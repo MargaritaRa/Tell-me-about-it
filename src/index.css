@@ -180,12 +180,28 @@ nav{
     align-items: center;
 }
 
+.ql-editor{
+    overflow: scroll;
+    background: var(--color-white);
+    height: 10rem !important;
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+input{
+    width: 100%;
+    padding: .7rem 1.1rem;
+    border-radius: var(--border-radius-1);
+    resize: none;
+}
 
 /* Start Home Page */
 /* Post component */
 
-.posts-container{
+.posts-container .categoryPosts-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 4rem;
@@ -197,11 +213,29 @@ nav{
     padding-bottom: 2rem;
     transition: var(--transition);
     cursor: pointer;
-    box-shadow: 0 a.5rem 2rem rgba(0,0,0,0.1);
 }
 .post:hover{
-    box-shadow: none;
+    box-shadow: 0 a.5rem 2rem rgba(0,0,0,0.1);
 }
+.post-image{
+    border-radius: var(--border-radius-3);
+    overflow: hidden;
+    height: 16rem;
+    overflow: hidden;
+}
+.post-content{
+    margin-top: 1.5rem;
+}
+.post-content h3{
+    margin: 1rem 0 0.6rem;
+}
+.post-footer{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
 
 
 /* Start footer Bar */
