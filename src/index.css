@@ -185,7 +185,9 @@ nav{
     background: var(--color-white);
     height: 10rem !important;
 }
-
+.createPosts-form{
+    width: 100%;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -201,7 +203,7 @@ input{
 /* Start Home Page */
 /* Post component */
 
-.posts-container .categoryPosts-container{
+.posts-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 4rem;

@@ -5,12 +5,11 @@ import ReactDOM from 'react-dom/client'
 // COMPONENTS
 import App from './components/App.jsx'
 import Home from './components/Home'
-import CategoryPosts  from './components/CategoryPosts.jsx'
 import Posts from './components/Posts.jsx'
 import PostsItem from './components/PostsItem.jsx'
 import BookList from './components/BookList.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
-import Create from "./components/Create.jsx"
+
 
 // CSS
 import './index.css'
@@ -18,6 +17,7 @@ import './index.css'
 
 // REACT-ROUTER-DOM
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import PostForm from './components/PostForm.jsx'
 
 // ROUTES
 const routes = [
@@ -32,8 +32,13 @@ const routes = [
         errorElement: <ErrorPage />
       },
       {
-        path: "/posts/create",
-        element: <Create />,
+        path:"postForm",
+        element: <PostForm />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: 'bookList',
+        element: <BookList />,
         errorElement: <ErrorPage />
       },
       {
@@ -44,16 +49,6 @@ const routes = [
           {
             path: 'posts/:id',
             element: <PostsItem />,
-            errorElement: <ErrorPage />
-          },
-          {
-            path: 'post/categories/:category',
-            element: <CategoryPosts />,
-            errorElement: <ErrorPage />
-          },
-          {
-            path: 'bookList',
-            element: <BookList />,
             errorElement: <ErrorPage />
           },
         ]
