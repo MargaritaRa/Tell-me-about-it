@@ -37,7 +37,7 @@ const routes = [
         errorElement: <ErrorPage />
       },
       {
-        path: "post",
+        path: "posts",
         element: <Posts />,
         errorElement: <ErrorPage />,
         children: [

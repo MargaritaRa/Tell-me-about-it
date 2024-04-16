@@ -4,37 +4,37 @@
         {
             "id": 1,
             "Image": "./Image/FourthWing.png",
-            "category": "Entertainment",
+            "Category": "Entertainment",
             "Title": "My Favorite Book",
-            "decription":" Picture this. Dragons, self-discovery, strength, and a smart women. Do I even need to say more?... Nope!"
+            "Decription":" Picture this. Dragons, self-discovery, strength, and a smart women. Do I even need to say more?... Nope!"
         },
         {
             "id": 2,
             "Image": "./Image/SevenHusbands.png",
-            "category": "Art",
+            "Category": "Art",
             "Title": "The Art of Playing the System",
-            "decription":"I understand this book is not based on actual events. However, it holds so much truth, and it highlights what women sometimes have to do to succeed. Fortunately, times have become more progressive."
+            "Decription":"I understand this book is not based on actual events. However, it holds so much truth, and it highlights what women sometimes have to do to succeed. Fortunately, times have become more progressive."
         },
         {
             "id": 3,
             "Image": "./Image/MusicNotes.png",
-            "category": "Music",
+            "Category": "Music",
             "Title": "Read Music",
-            "decription":"Let's learn how to read musical notes"
+            "Decription":"Let's learn how to read musical notes"
         },
         {
             "id": 4,
             "Image": "./Image/Negotiate.png",
-            "category": "Education",
+            "Category": "Education",
             "Title": "Win the fight",
-            "decription":" Wonder how some people can always negotiate for the lowest amount? Ever wonder how they stay calm and know exactly what to say? Here’s a book that will help you win any negotiation!"
+            "Decription":" Wonder how some people can always negotiate for the lowest amount? Ever wonder how they stay calm and know exactly what to say? Here’s a book that will help you win any negotiation!"
         },
         {
             "id": 5,
             "Image": "./Image/Vogue.png",
-            "category": "Fashion",
+            "Category": "Fashion",
             "Title": "Vogue",
-            "decription":"Vogue. Need I say more!?!"
+            "Decription":"Vogue. Need I say more!?!"
         }
     ]
 }
