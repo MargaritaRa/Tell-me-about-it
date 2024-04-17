@@ -1,39 +1,46 @@
 {
   "Posts": [
     {
-      "id": 1,
+      "id": "1",
       "Image": "./Image/FourthWing.png",
       "Category": "Entertainment",
       "Title": "My Favorite Book",
       "Decription": " Picture this. Dragons, self-discovery, strength, and a smart women. Do I even need to say more?... Nope!"
     },
     {
-      "id": 2,
+      "id": "2",
       "Image": "./Image/SevenHusbands.png",
       "Category": "Art",
       "Title": "The Art of Playing the System",
       "Decription": "I understand this book is not based on actual events. However, it holds so much truth, and it highlights what women sometimes have to do to succeed. Fortunately, times have become more progressive."
     },
     {
-      "id": 3,
+      "id": "3",
       "Image": "./Image/MusicNotes.png",
       "Category": "Music",
       "Title": "Read Music",
       "Decription": "Let's learn how to read musical notes"
     },
     {
-      "id": 4,
+      "id": "4",
       "Image": "./Image/Negotiate.png",
       "Category": "Education",
       "Title": "Win the fight",
       "Decription": " Wonder how some people can always negotiate for the lowest amount? Ever wonder how they stay calm and know exactly what to say? Here’s a book that will help you win any negotiation!"
     },
     {
-      "id": 5,
+      "id": "5",
       "Image": "./Image/Vogue.png",
       "Category": "Fashion",
       "Title": "Vogue",
       "Decription": "Vogue. Need I say more!?!"
+    },
+    {
+      "id": "da15",
+      "Title": "Harry Potter",
+      "Image": "https://nurtureforthefuture.files.wordpress.com/2021/07/8f243-harry-potter-books.jpg",
+      "Category": "Fantasy",
+      "Decription": "pmuj"
     }
   ]
 }

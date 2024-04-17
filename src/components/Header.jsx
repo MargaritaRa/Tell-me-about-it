@@ -26,5 +26,3 @@ function Header() {
 }
 
 export default Header;
-
-<PostForm posts={post} setPosts={setPosts} />

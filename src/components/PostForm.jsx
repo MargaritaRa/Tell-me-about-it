@@ -4,7 +4,7 @@ import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css'
 
 
-function PostForm({posts, setPosts}) {
+function PostForm() {
 
     const [image, setImage] = useState("")
     const [category, setCategory] = useState('')
@@ -43,23 +43,15 @@ function PostForm({posts, setPosts}) {
                 Title: title,
                 Image: image,
                 Category: category,
-                Decription: decription,
-                // likes:0
+                Decription: decription
             })
         })
         .then (response => response.json())
         .then (newPost => {
-            setPosts(posts => [...posts, newPost]); 
-            setTitle('');
-            setImage('');
-            setCategory('');
-            setDescription('');
-            alert('Post created successfully!');
-        })
-        .catch(error => {
-            console.error('Error creating post:', error);
-        });
-    };
+            setFormData({title: '', image: '', description: '', category: ''})
+            setComics(comics => [...comics, newPost])
+          })
+     };
   
 
     const handleChange = (html) => {
@@ -90,13 +82,14 @@ function PostForm({posts, setPosts}) {
             modules={modules} 
             formats={formats} 
             value={decription}
-            // onChange={setDescription}
             onChange = {handleChange}
             />
             
 
-            <input type="file" 
+            <input  
             name="image" 
+            type='text'
+            placeholder='Type image URL'
             value={image} 
             onChange={event => setImage(event.target.value)} />
             <button type="submit" value="Add Post" className='btn-danger'>Create</button>
