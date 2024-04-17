@@ -1,21 +1,63 @@
-// import {useState, useEffect} from 'react'
+import React, { useState } from 'react';
 
-function BookList(){
+const BookList = () => {
+    const [query, setQuery] = useState('');
+    const [books, setBooks] = useState([]);
+    const [error, setError] = useState(null);
 
-    // const[bookList, setBookList] = useState([])
+    const handleSearch = async () => {
+        try {
+            if (query.trim() === '') {
+                // Display error if search query is empty or only contains whitespace
+                setError('Please enter a valid search term.');
+                return;
+            }
 
-    // useEffect(() => (
-    //     fetch('https://www.googleapis.com/books/v1/{collectionName}/resourceID?parameters')
-    //     .then (response => response.json())
-    //     .then(data => setBookList(data))
-    // ),[])
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            const data = await response.json();
+            setBooks(data.items || []);
+            setError(null); // Clear any previous errors
+        } catch (error) {
+            console.error('Error fetching book data:', error);
+            setError('Failed to fetch book data. Please try again later.');
+        }
+    };
 
+    return (
+        <div className='post-content'>
+            <h1>Book Search</h1>
+            <input
+                type="text"
+                placeholder="Enter book title, author, or keyword"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+            />
+            <button onClick={handleSearch} className='btn btn-search'>Search</button>
 
-    return(
-        <div>
-            <h3>This is where the book API will be located</h3>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
+            <div>
+                {books.map((book) => (
+                    <div key={book.id} className='container-search'>
+                        <h2>{book.volumeInfo.title}</h2>
+                        <img
+                            src={book.volumeInfo.imageLinks?.thumbnail || ''}
+                            alt={book.volumeInfo.title}
+                            style={{ maxWidth: '100px' }}
+                        />
+                        <p>Authors: {book.volumeInfo.authors?.join(', ') || 'Unknown'}, 
+                            Publisher: {book.volumeInfo.publisher || 'Unknown'}</p>
+                        <p>Description: {book.volumeInfo.description || 'No description available'}</p>
+                        
+                        <hr />
+                    </div>
+                ))}
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default BookList
+export default BookList;

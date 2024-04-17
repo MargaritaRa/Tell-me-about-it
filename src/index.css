@@ -31,6 +31,13 @@
     --border-radius-4: 1.6rem;
 }
 
+
+  @media (max-width: 768px) {
+    #outlet {
+      padding: 1rem; 
+    }
+  } 
+
 html{
     font-family: "Lora", serif;
     font-optical-sizing: auto;
@@ -113,9 +120,16 @@ section{
     padding: .4rem .8rem;
     font-weight: 500;
 }
-.btn-danger{
+.btn-danger, .btn-search{
     background: var(--color-danger);
     color: var(--color-white);
+    display: inline-block;
+    width: fit-content;
+    padding: .6rem 1.2rem;
+    border-radius: var(--border-radius-2);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
 }
 .btn:hoover{
     background: var(--color-gray-900);
@@ -182,16 +196,18 @@ nav{
 
 .ql-editor{
     overflow: scroll;
-    background: var(--color-white);
+    background: var(--color-gray-100);
     height: 10rem !important;
 }
 .createPosts-form{
+    margin-top: 8rem;
     width: 100%;
+
 }
 form{
     display: flex;
     flex-direction: column;
-    gap: .8rem;
+    gap: 1.2rem;
 }
 input{
     width: 100%;
@@ -208,6 +224,19 @@ input{
     grid-template-columns: repeat(3,1fr);
     gap: 4rem;
 }
+
+.container-search{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    background: var(--color-gray-300);
+    padding: 1rem;
+    border:4px solid rgba(40, 8, 59, 0.1);
+    padding-bottom: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
 .post{
     background: var(--color-white);
     padding: 1rem;
@@ -226,7 +255,7 @@ input{
     overflow: hidden;
 }
 .post-content{
-    margin-top: 1.5rem;
+    margin-top: 8rem;
 }
 .post-content h3{
     margin: 1rem 0 0.6rem;

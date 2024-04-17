@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PostsItem from './PostsItem';
 
+
 function Posts() {
   const [posts, setPosts] = useState([]);
 
@@ -12,6 +13,7 @@ function Posts() {
         console.error('Error fetching data:', error);
       });
   }, []);
+
 
   const postsList = posts.map(post => (
     <PostsItem

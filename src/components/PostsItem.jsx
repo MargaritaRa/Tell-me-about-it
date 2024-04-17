@@ -1,29 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function PostsItem({ image, category, title, description, post, posts, setPosts }) {
+function PostsItem({ id,image, category, title, description, onDelete }) {
 
-    // function handleUpdateLikes() {
-    //     fetch( `http://localhost:3000/Posts/${post.id}`, {
-    //         method: 'PATCH',
-    //         headers: {
-    //             'content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //         },
-    //         body: JSON.stringify({ likes: post.likes + 1 })
-    //     })
-    //     .then (response => response.json())
-    //     .then (updatedPost => {
-    //         const updatedPostData = posts.map(post => {
-    //             if (post.id !== updatedPost.id) {
-    //                 return post
-    //             } else {
-    //                 return updatedPost
-    //             }
-    //         })
-    //         setPosts ( updatedPostData );
-    //     })
-    // }
 
   return (
     <article className="post">
@@ -36,8 +15,7 @@ function PostsItem({ image, category, title, description, post, posts, setPosts 
         </Link>
         <p>{description}</p>
         <div className="post-footer">
-          <Link to={`/post/categories/${category}`} className='btn btn-category'>{category}</Link>
-          {/* <button onClick={handleUpdateLikes}>{post.likes} Likes</button> */}
+          <h4 className='btn btn-category'>{category}</h4>
         </div>
       </div>
     </article>

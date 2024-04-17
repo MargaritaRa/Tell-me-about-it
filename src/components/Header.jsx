@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
-import PostForm from './PostForm';
 
 function Header() {
   return (
@@ -13,8 +12,8 @@ function Header() {
 
         <ul className="nav-menu">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/postForm" >Create New Post</Link></li>
-          <li><Link to="/bookList">Latest Books</Link></li>
+          <li><Link to="/postForm" >Create New Post </Link></li>
+          <li><Link to="/bookList">Search a Book</Link></li>
         </ul>
 
         <button className="nav-toggle-button">
@@ -27,3 +26,5 @@ function Header() {
 }
 
 export default Header;
+
+<PostForm posts={post} setPosts={setPosts} />

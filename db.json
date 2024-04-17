@@ -34,28 +34,6 @@
       "Category": "Fashion",
       "Title": "Vogue",
       "Decription": "Vogue. Need I say more!?!"
-    },
-    {
-      "id": "f7d1",
-      "title": "Alice in Wonderland",
-      "image": "C:\\fakepath\\Alice in Wonderland.png",
-      "category": "Fantasy",
-      "decription": "<p>Alice gets a visit from a Rabbit on a time crunch. This book is filled with fantasy and adult references. Not my top 10 books, but a favorite none the less.</p>",
-      "likes": 0
-    },
-    {
-      "id": "0d1c",
-      "title": "",
-      "image": "",
-      "category": "",
-      "decription": "h"
-    },
-    {
-      "id": "9b55",
-      "title": "",
-      "image": "",
-      "category": "",
-      "decription": ""
     }
   ]
 }

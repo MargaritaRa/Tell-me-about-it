@@ -3,6 +3,7 @@ import { useState } from 'react'
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css'
 
+
 function PostForm({posts, setPosts}) {
 
     const [image, setImage] = useState("")
@@ -39,18 +40,32 @@ function PostForm({posts, setPosts}) {
                 'Accept': 'application/json'
             },
             body: JSON.stringify( {
-                title,
-                image,
-                category,
-                decription,
+                Title: title,
+                Image: image,
+                Category: category,
+                Decription: decription,
                 // likes:0
             })
         })
         .then (response => response.json())
-        .then (newPostObj => {
-            setPosts([...posts, newPostObj])
+        .then (newPost => {
+            setPosts(posts => [...posts, newPost]); 
+            setTitle('');
+            setImage('');
+            setCategory('');
+            setDescription('');
+            alert('Post created successfully!');
         })
-    }
+        .catch(error => {
+            console.error('Error creating post:', error);
+        });
+    };
+  
+
+    const handleChange = (html) => {
+        const strippedHtml = html.replace(/<p>/g, '').replace(/<\/p>/g, '');
+        setDescription(strippedHtml);
+      };
 
     return(
         <form onSubmit={handleSubmit} className="form createPosts-form">
@@ -69,26 +84,22 @@ function PostForm({posts, setPosts}) {
             onChange={event => setCategory(event.target.value)}
             value={category} />
 
-            {/* <textarea type='text'
-            name='decription'
-            placeholder='Decription'
-            onChange={event => setDescription(event.target.value)}
-            value={category}> Type your description here </textarea> */}
-
+        
+            
             <ReactQuill 
             modules={modules} 
             formats={formats} 
             value={decription}
-            onChange={setDescription}
+            // onChange={setDescription}
+            onChange = {handleChange}
             />
+            
 
             <input type="file" 
             name="image" 
             value={image} 
-            onChange={event => setImage(event.target.value)} 
-            accept="png, jpg, jpeg" />
-
-            <button type="submit" value="Add Post">Create</button>
+            onChange={event => setImage(event.target.value)} />
+            <button type="submit" value="Add Post" className='btn-danger'>Create</button>
 
         </form>
     )
