@@ -31,6 +31,27 @@
     --border-radius-4: 1.6rem;
 }
 
+/* :root{
+    --color-primary: #4dcbb9;
+    --color-danger: #da0f3f;
+    --color-white: #ffff;
+    --color-light: #ccc;
+    --color-bg: #edffed;
+    --color-gray-100: hs1(220, 20%, 10%, 5%);
+    --color-gray-200: hs1(220, 20%, 10%, 10%);
+    --color-gray-300: hs1(220, 20%, 10%, 25%);
+    --color-gray-500: hs1(220, 20%, 10%, 50%);
+    --color-gray-700: #234d30;
+    --color-gray-900:#0c302b;
+
+    --transition: .3s ease all;
+
+    --border-radius-1: .2rem;
+    --border-radius-2: .4rem;
+    --border-radius-3: .8rem;
+    --border-radius-4: 1.6rem;
+} */
+
 
   @media (max-width: 768px) {
     #outlet {
@@ -195,15 +216,12 @@ nav{
 }
 
 .ql-editor{
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-family: "Lora", serif;
     overflow: scroll;
     background: var(--color-white);
     height: 10rem !important;
-}
-.ql p {
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-    line-height: inherit;
 }
 .createPosts-form{
     margin-top: 8rem;
