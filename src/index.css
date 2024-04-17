@@ -199,6 +199,12 @@ nav{
     background: var(--color-white);
     height: 10rem !important;
 }
+.ql p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+}
 .createPosts-form{
     margin-top: 8rem;
     width: 100%;

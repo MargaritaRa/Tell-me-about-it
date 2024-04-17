@@ -4,13 +4,12 @@ import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css'
 
 
-function PostForm() {
+function PostForm({setPosts}) {
 
     const [image, setImage] = useState("")
     const [category, setCategory] = useState('')
     const [title, setTitle] = useState('')
     const [decription, setDescription] = useState('')
-
 
 
     const modules = {
@@ -30,39 +29,46 @@ function PostForm() {
         'link', 'image'
     ]
 
-    function handleSubmit(event) {
-        event.preventDefault()
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    
         fetch('http://localhost:3000/Posts', {
-            method: 'POST',
-            headers: {
-                'content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify( {
-                Title: title,
-                Image: image,
-                Category: category,
-                Decription: decription
-            })
-        })
-        .then (response => response.json())
-        .then (newPost => {
-            setFormData({title: '', image: '', description: '', category: ''})
-            setComics(comics => [...comics, newPost])
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            Title: title,
+            Image: image,
+            Category: category,
+            Description: decription
           })
-     };
-  
-
-    const handleChange = (html) => {
-        const strippedHtml = html.replace(/<p>/g, '').replace(/<\/p>/g, '');
-        setDescription(strippedHtml);
+        })
+          .then((response) => response.json())
+          .then((newPost) => {
+            setTitle('');
+            setImage('');
+            setCategory('');
+            setDescription('');
+            setPosts((prevPosts) => [...prevPosts, newPost]);
+          })
+          .catch((error) => {
+            console.error('Error creating post:', error);
+          });
       };
+
+    // const handleChange = (tag) => {
+    //     const strippedHtml = tag.replace(/<p>/g, '').replace(/<\/p>/g, '');
+    //     setDescription(strippedHtml);
+    //   };
+      
+      
 
     return(
         <form onSubmit={handleSubmit} className="form createPosts-form">
             <h2>Create a New Post</h2>
-            <p className="form-message"> Go ahead, add your favorite book and let's talk all about it</p>
+            <p className="form-message"> Add your favorite book and let's chat about it.</p>
 
             <input type='text'
             name='title'
@@ -82,8 +88,19 @@ function PostForm() {
             modules={modules} 
             formats={formats} 
             value={decription}
-            onChange = {handleChange}
+            onChange = {setDescription}
+            placeholder="Write your post here..."
+            element = "textarea"
             />
+
+            {/* <ReactQuill 
+            modules={modules} 
+            formats={formats} 
+            element = "textarea"
+            value={decription}
+            placeholder="Write your post here..."
+            onChange={event => setDescription(event.target.value)}
+            /> */}
             
 
             <input  

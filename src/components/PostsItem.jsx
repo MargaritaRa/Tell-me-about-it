@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactQuill from 'react-quill';
+import "react-quill/dist/quill.bubble.css"
 
-function PostsItem({ id,image, category, title, description, onDelete }) {
+function PostsItem({ image, category, title, description}) {
 
-
+console.log(description)
   return (
     <article className="post">
       <div className="post-image">
@@ -13,7 +15,10 @@ function PostsItem({ id,image, category, title, description, onDelete }) {
         <Link to={`/posts/${title}`}>
           <h3>{title}</h3>
         </Link>
-        <p>{description}</p>
+        <ReactQuill
+        value={description}
+        readOnly= {true}
+        theme='bubble' />
         <div className="post-footer">
           <h4 className='btn btn-category'>{category}</h4>
         </div>

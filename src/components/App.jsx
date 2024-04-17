@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom"
 
 
 
-function App({post, setPost}) {
+function App() {
 
   return (
     <div>

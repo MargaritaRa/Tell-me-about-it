@@ -21,7 +21,7 @@ function Posts() {
       image={post.Image}
       category={post.Category}
       title={post.Title}
-      description={post.Decription}
+      description={post.Description}
     />
   ));
 
