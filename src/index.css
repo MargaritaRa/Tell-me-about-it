@@ -32,11 +32,11 @@
 }
 
 /* :root{
-    --color-primary: #4dcbb9;
+    --color-primary: #299a89;
     --color-danger: #da0f3f;
     --color-white: #ffff;
-    --color-light: #ccc;
-    --color-bg: #edffed;
+    --color-light: #a8beba;
+    --color-bg: #dbf1db;
     --color-gray-100: hs1(220, 20%, 10%, 5%);
     --color-gray-200: hs1(220, 20%, 10%, 10%);
     --color-gray-300: hs1(220, 20%, 10%, 25%);
