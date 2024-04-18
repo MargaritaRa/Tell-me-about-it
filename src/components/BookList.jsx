@@ -8,7 +8,7 @@ const BookList = () => {
     const handleSearch = async () => {
         try {
             if (query.trim() === '') {
-                // Display error if search query is empty or only contains whitespace
+                
                 setError('Please enter a valid search term.');
                 return;
             }
@@ -19,7 +19,7 @@ const BookList = () => {
             }
             const data = await response.json();
             setBooks(data.items || []);
-            setError(null); // Clear any previous errors
+            setError(null); 
         } catch (error) {
             console.error('Error fetching book data:', error);
             setError('Failed to fetch book data. Please try again later.');
@@ -50,7 +50,7 @@ const BookList = () => {
                         />
                         <p>Authors: {book.volumeInfo.authors?.join(', ') || 'Unknown'}, 
                             Publisher: {book.volumeInfo.publisher || 'Unknown'}</p>
-                        <p>Description: {book.volumeInfo.description || 'No description available'}</p>
+                        <p className='boolList-description'>Description: {book.volumeInfo.description || 'No description available'}</p>
                         
                         <hr />
                     </div>

@@ -214,14 +214,23 @@ nav{
     justify-content: center;
     align-items: center;
 }
+.boolList-description{
+    overflow: scroll;
+}
 
 .ql-editor{
     font-optical-sizing: auto;
     font-style: normal;
+    font-size: medium;
     font-family: "Lora", serif;
     overflow: scroll;
     background: var(--color-white);
     height: 10rem !important;
+}
+.ql-editor img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
 }
 .createPosts-form{
     margin-top: 8rem;

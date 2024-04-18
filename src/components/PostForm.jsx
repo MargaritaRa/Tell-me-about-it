@@ -57,11 +57,6 @@ function PostForm({setPosts}) {
             console.error('Error creating post:', error);
           });
       };
-
-    // const handleChange = (tag) => {
-    //     const strippedHtml = tag.replace(/<p>/g, '').replace(/<\/p>/g, '');
-    //     setDescription(strippedHtml);
-    //   };
       
       
 
@@ -81,7 +76,6 @@ function PostForm({setPosts}) {
             placeholder='Category'
             onChange={event => setCategory(event.target.value)}
             value={category} />
-
         
             
             <ReactQuill 
@@ -92,15 +86,6 @@ function PostForm({setPosts}) {
             placeholder="Write your post here..."
             element = "textarea"
             />
-
-            {/* <ReactQuill 
-            modules={modules} 
-            formats={formats} 
-            element = "textarea"
-            value={decription}
-            placeholder="Write your post here..."
-            onChange={event => setDescription(event.target.value)}
-            /> */}
             
 
             <input  
